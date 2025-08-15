@@ -2,7 +2,7 @@ import React from "react";
 import HomeComponent from "./Home/homeComponent";
 import FooterComponent from "./Footer/Footer";
 import GuitarModelsPage from "./GuitarModels/GuitarModels";
-
+import GuitarDetails from "./GuitarDetails/GuitarDetails";
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,6 +17,10 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<HomeComponent />} />
         <Route path="/brands/:brandId/models" element={<GuitarModelsPage />} />
+        <Route
+          path="/brands/:brandId/models/:modelId"
+          element={<GuitarDetails />}
+        />
       </Routes>
       <FooterComponent />
     </Router>

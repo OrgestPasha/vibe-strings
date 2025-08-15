@@ -5,11 +5,19 @@
   position: relative;
 }
 
+.back {
+  transform: translateY(-10px);
+  font-weight: 500;
+  font-size: 1rem;
+}
+.back > svg {
+  margin-right: 10px;
+}
 .logo-fixed {
   height: 32px;
   width: 160px;
-  margin-top: 50px;
   margin-left: 100px;
+  margin-top: -25px;
 }
 
 .logo-wrapper {
@@ -51,9 +59,9 @@
   display: flex;
   height: 90vh;
   position: relative;
-  top: -200px;
+  top: -150px;
   left: 150px;
-  margin-bottom: -200px;
+  margin-bottom: -150px;
 }
 
 .models-hero-left {
@@ -149,10 +157,10 @@
   border-radius: 8px;
   min-width: 200px;
 }
-* {
-  border: 1px solid red;
-}
+
 .grid-container {
+  margin-top: 150px;
+  padding: 35px;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -173,6 +181,11 @@
   margin-top: 0;
   text-align: start;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.model-card:hover {
+  transform: translateY(-5px);
 }
 
 .model-name {
