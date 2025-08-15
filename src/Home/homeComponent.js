@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./home.css";
+import {useNavigate} from "react-router-dom";
 import {gql, useQuery} from "@apollo/client";
 const GET_BRANDS = gql`
   query getBrands {
@@ -12,6 +13,7 @@ const GET_BRANDS = gql`
 
 function HomeComponent() {
   const {loading, error, data} = useQuery(GET_BRANDS);
+  const navigate = useNavigate();
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -49,6 +51,7 @@ function HomeComponent() {
             <img
               key={brand.id}
               src={brand.image}
+              onClick={() => navigate(`/brands/${brand.id}/models`)}
               alt={`Brand ${brand.id}`}
               className="brandImage"
             />

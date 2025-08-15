@@ -6,7 +6,7 @@ function FooterComponent() {
     <div class="footerContainer">
       <div class="footerTop">
         <div class="footerTopOne footerTopSection">
-          <img src="././logo.png" class="footerLogo"></img>
+          <img src="././logo.png" class="footerLogo" alt="logo"></img>
           <p>
             <svg
               width="24"
